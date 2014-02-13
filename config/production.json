@@ -1,0 +1,7 @@
+{
+    "workers": {
+        "server": {
+            "instances": 10
+        }
+    }
+}

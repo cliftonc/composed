@@ -1,0 +1,8 @@
+{{#esi.enabled}}
+  <!--esi        
+       <esi:include src="/esi_error" onerror="continue"/>       
+  -->
+{{/esi.enabled}}
+{{^esi.enabled}}
+  <h4>ESI is disabled</h4>
+{{/esi.enabled}}

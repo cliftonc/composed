@@ -1,0 +1,10 @@
+<script>
+	$(document).ready(function() {
+		$.get( "/ajax", function( data ) {
+		  $( ".ajax-response" ).html( data );		  
+		});
+	});
+</script>
+<div class='ajax-response'>
+	Loading ...
+</div>

@@ -1,0 +1,15 @@
+{
+    "workers": {
+        "server": {
+            "instances": 1
+        }
+    },
+    "logging": {
+        "console": {
+            "level": "debug"
+        },
+        "file": {
+            "enabled": true
+        }
+    }
+}

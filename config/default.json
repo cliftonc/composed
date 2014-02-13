@@ -1,0 +1,35 @@
+{
+    "workers": {
+        "server": {
+            "port": 8000,
+            "reclusterReady": "listening"
+        }
+    },
+    "logging": {
+        "console": {
+            "enabled": true,
+            "level": "info",
+            "timestamp": true,
+            "colorize": true
+        },
+        "captureConsole": {
+            "enabled": false
+        },
+        "file": {
+            "enabled": false,
+            "level": "info",
+            "filename": "logs/compose-%s.log",
+            "maxsize": 16777216,  // 16Mb
+            "maxFiles": 10,  // Note capital 'F'
+            "timestamp": true,
+            "colorize": false,
+            "json": false
+        },
+        "syslog": {
+            "enabled": false,
+            "level": "info",
+            "timestamp": true,
+            "identity": "COMPOSE"
+        }
+     }
+}

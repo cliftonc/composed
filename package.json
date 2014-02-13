@@ -1,0 +1,28 @@
+{
+  "name": "composed",
+  "version": "0.0.1",
+  "private": true,
+  "dependencies": {
+    "async": "0.2.x",
+    "config": "0.4.24",
+    "express": "~3.4.0",
+    "moment": "~2.0.0",
+    "optimist": "0.3.x",
+    "should": "0.6.x",    
+    "underscore": "1.4.x",
+    "winston": "0.7.x",
+    "debug": "~0.7.2",
+    "recluster": "~0.3.0",
+    "winston-posix-syslog": "0.0.7",
+    "consolidate": "~0.9.1",
+    "mustache": "~0.7.2",
+    "qs": "~0.6.5"    
+  },
+  "devDependencies": {
+    "mocha": "1.9.x"
+  },
+  "engines": {
+    "node": ">=0.8.23 <0.11.0"
+  },
+  "enginesStrict": true
+}

@@ -4,7 +4,7 @@
 exports.index = function (req, res) {
     
    var esi = req.enableEsi,
-       partials = {esi_header: '../views/esi_header', esi_error: '../views/esi_error',  esi_maxwait: '../views/esi_maxwait',withpage: '../views/withpage', fragment: '../views/fragment', esi_sidebar: '../views/esi_sidebar', ajax_sidebar: '../views/ajax_sidebar'};     
+       partials = {esi_header: '../views/esi_header', esi_maxwait: '../views/esi_maxwait',withpage: '../views/withpage', fragment: '../views/fragment', esi_sidebar: '../views/esi_sidebar', ajax_sidebar: '../views/ajax_sidebar'};     
 
    // Get fragments
    getFragment('mykey', function(err, html) {
@@ -26,14 +26,18 @@ exports.esi_sidebar = function(req, res) {
 }
 
 exports.esi_error = function(req, res) {
+
+  var errorCode = req.query.error ? req.query.error : 500;
+
   // Return an error
-  res.status(500)
-  res.end("This is an error page");
+  res.status(errorCode);
+  res.end("This is a " + errorCode + " page.");
+
 }
 
 exports.esi_maxwait = function(req, res) {
 
-  // Respond with small delay
+  // Respond with delay - maxwait doesn't work with ETS
   setTimeout(function() {
    res.end("I AM SLOW!"); 
   }, 500);
@@ -61,8 +65,6 @@ function getFragment(fragmentKey, next) {
                        '<h2 class="blog-post-title">Rendered from in memory cache</h2>' +
                        '<p>This could be content that is accessible in a local cache, populated via messaging.</p>' +
                        '</div>';
-
-
 
     next(null, fragmentHtml);
 

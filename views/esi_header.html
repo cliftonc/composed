@@ -3,6 +3,12 @@
        <esi:include src="/esi_header" onerror="continue"/>       
   -->
 {{/esi.enabled}}
-{{^esi.enabled}}
-  <h4>ESI is disabled</h4>
+{{^esi.enabled}}  
+ <div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="navbar-header">      
+      <a class="navbar-brand error" href="#">ESI Not Detected</a>
+    </div>    
+  </div>
+</div>
 {{/esi.enabled}}

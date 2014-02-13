@@ -21,7 +21,7 @@ function processArgs() {
 
   return {
     cpus: argv.c || config.get('workers:server:instances') || require('os').cpus().length,
-    port: argv.p || config.get('workers:server:port') || 3000,
+    port: argv.p || config.get('workers:server:port') || 8000,
     logger: Logging.configureLogging(config.get('logging'), argv.m),
     config: config,
     env: env

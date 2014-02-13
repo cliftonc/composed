@@ -64,9 +64,32 @@
 
           <div class="sidebar-module sidebar-module-inset">
             
-            <h4>ESI include of a broken page</h4>
+            <h4>ESI include of a 500 page</h4>
 
-            {{> esi_error }}            
+            {{#esi.enabled}}
+              <!--esi        
+                   <esi:include src="/esi_error?error=500" onerror="continue"/>       
+              -->
+            {{/esi.enabled}}
+            {{^esi.enabled}}
+              <h4 class='error'>ESI not detected</h4>
+            {{/esi.enabled}}          
+
+          </div>
+
+
+          <div class="sidebar-module sidebar-module-inset">
+            
+            <h4>ESI include of a 404 page</h4>
+
+             {{#esi.enabled}}
+              <!--esi        
+                   <esi:include src="/esi_error?error=404" onerror="continue"/>       
+              -->
+            {{/esi.enabled}}
+            {{^esi.enabled}}
+              <h4 class='error'>ESI not detected</h4>
+            {{/esi.enabled}}          
 
           </div>
 

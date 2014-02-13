@@ -13,7 +13,6 @@
     "winston": "0.7.x",
     "debug": "~0.7.2",
     "recluster": "~0.3.0",
-    "winston-posix-syslog": "0.0.7",
     "consolidate": "~0.9.1",
     "mustache": "~0.7.2",
     "qs": "~0.6.5"    

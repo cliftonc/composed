@@ -2,9 +2,7 @@
 
 ## Install node (linux / mac)
 
-* curl https://raw.github.com/creationix/nvm/master/install.sh | sh
-* nvm install v0.10.22
-* nvm alias default 0.10.22
+* http://nodejs.org/download/
 
 ## Install the node app
 

@@ -19,7 +19,8 @@
 
 ## Install ETS
 
-* [Open localhost](http://localhost:8000/)
+* [Download direct from Akamai](http://www.akamai.com/dl/technical_publications/ETS_5.3.1.0_Linux-FC7.tar.gz)
+* For a pre-configured virtualbox VM please contact me.
 
 
 

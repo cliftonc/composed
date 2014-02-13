@@ -13,7 +13,6 @@ npm install
 ## Run the node app
 
 node server
-
 [Open localhost](http://localhost:8000/)
 
 ## Install ETS
